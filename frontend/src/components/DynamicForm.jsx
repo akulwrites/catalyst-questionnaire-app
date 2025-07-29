@@ -278,6 +278,7 @@ export default function DynamicForm({ onSubmit }) {
                       fullWidth
                       value={opt.marks}
                       onChange={(e) => updateOption(index, "marks", e.target.value)}
+                      onWheel={(e) => e.target.blur()} // 👈 prevents scroll change
                     />
                   </Grid>
                 
