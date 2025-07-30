@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 
 export default function QuestionTable({ questions }) {
+    const imageBaseURL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
     return (
         <TableContainer component={Paper} sx={{ mt: 6 }}>
             <Typography
@@ -44,7 +45,7 @@ export default function QuestionTable({ questions }) {
                         </div>
                         {opt.imageUrl && (
                             <img
-                            src={`http://localhost:3001${opt.imageUrl}`}
+                            src={`${imageBaseURL}${opt.imageUrl}`}
                             alt="Option"
                             style={{
                                 width: "80px",
